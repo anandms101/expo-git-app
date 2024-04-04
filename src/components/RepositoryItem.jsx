@@ -13,7 +13,7 @@ const styles = StyleSheet.create({
   flexRepoSubDetailsContainer: {
     flexDirection: "row",
     paddingHorizontal: 10,
-    justifyContent: "center",
+    justifyContent: "space-around",
   },
   flexRepoDetailsContainer: {
     flexDirection: "row",

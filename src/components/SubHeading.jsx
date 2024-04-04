@@ -1,19 +1,19 @@
 import Text from "./Text";
 import { Alert, Pressable, StyleSheet, View } from "react-native";
+import { Link } from "react-router-native";
 
 const styles = StyleSheet.create({
   flexContainer: {
-    flexDirection: "column",
-    justifyContent: "flex-start",
+    flexDirection: "row",
+    justifyContent: "space-around",
     paddingVertical: 20,
+    display: "flex",
   },
-  flexItem: {
-    alignItems: "flex-start",
-  },
+  flexItem: {},
 });
 
 const onPressFunction = () => {
-  Alert.alert("Repositories pressed");
+  Alert.alert("Tab pressed");
 };
 
 const Subheading = () => {
@@ -21,9 +21,20 @@ const Subheading = () => {
     <View style={styles.flexContainer}>
       <View style={styles.flexItem}>
         <Pressable onPress={onPressFunction}>
-          <Text color="primary" fontSize="subheading" fontWeight="bold">
-            Repositories
-          </Text>
+          <Link to="/">
+            <Text color="primary" fontSize="subheading" fontWeight="bold">
+              Repositories
+            </Text>
+          </Link>
+        </Pressable>
+      </View>
+      <View style={styles.flexItem}>
+        <Pressable onPress={onPressFunction}>
+          <Link to="/signin">
+            <Text color="primary" fontSize="subheading" fontWeight="bold">
+              SignIn
+            </Text>
+          </Link>
         </Pressable>
       </View>
     </View>
