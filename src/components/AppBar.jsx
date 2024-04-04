@@ -1,4 +1,4 @@
-import {  View, StyleSheet } from "react-native";
+import { View, StyleSheet, ScrollView } from "react-native";
 import Constants from "expo-constants";
 import Subheading from "./SubHeading";
 
@@ -7,13 +7,19 @@ const styles = StyleSheet.create({
     paddingTop: Constants.statusBarHeight,
     backgroundColor: "#24292e",
   },
+  scrollView: {
+    marginHorizontal: 20,
+
+  },
   // ...
 });
 
 const AppBar = () => {
   return (
     <View style={styles.container}>
+      {/* <ScrollView style={styles.scrollView} horizontal> */}
         <Subheading />
+      {/* </ScrollView> */}
     </View>
   );
 };

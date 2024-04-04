@@ -9,7 +9,8 @@ const styles = StyleSheet.create({
     paddingVertical: 20,
     display: "flex",
   },
-  flexItem: {},
+  flexItem: {
+  },
 });
 
 const onPressFunction = () => {
